@@ -10,9 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon-32x32.png">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:200,300,400,500,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../wp-content/themes/uncommon/css/flexslider.css">
-	<link rel="stylesheet" type="text/css" href="../wp-content/themes/uncommon/css/stylesf9e3.css?v=1.1">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flexslider.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',  filename='css/stylesf9e3.css') }}">
 
+
+	
 <!-- END HEADER FIRST PART -->	
 
 	
@@ -99,7 +101,7 @@
 
 			<div class="header_text unselectable blur" unselectable="yes" onselectstart="return false;">
 				<figure>
-				<img class="poster" src="../wp-content/themes/uncommon/images/stammer_logo.png" style="width: 80%;">
+				<img class="poster" src="{{ url_for('static',filename='images/stammer_logo.png')}}" style="width: 80%;">
 				</figure>
 				 <ul>
 					<li><span class="fragment_text">Your Stuttering is like an </span><span class="word_action" data-id="rebel">iceberg</span><span class="fragment_text"></span></li>
@@ -108,7 +110,7 @@
 				</ul> 
 			</div>
 		</div>
-		<div id="container_rebel" class="container_rebel">
+		<div id="container_rebel" class="container_rebel" style="visibility: hidden;">
 			<video id="video_01" playsinline webkit-playsinline width="1280" height="720" preload="auto" loop="" muted="" poster="#">
 				<source src="http://noescomun.com/wp-content/themes/uncommon/videos/rebel.mp4" type="video/mp4">
 			</video>
@@ -129,11 +131,11 @@
 	</div>		<header>
 			<nav>
 				<ul>
-					<li><a href="what-we-do/index.html" title="What we do" class="">What we do</a></li>
-          			<li><a href="our-work/index.html" title="Our work" class="">Demos</a></li>
-          			<li><a href="our-ideas/index.html" title="Our ideas" class="">Our ideas</a></li>
-          			<li><a href="who-we-are/index.html" title="Who we are" class="">Who we are</a></li>
-          			<li><a href="who-we-are/index.html" title="Who we are" class="">Blog</a></li>
+					<li><a href="/" title="What we do" class="">What we do</a></li>
+          			<li><a href="/demo" title="Our work" class="">Demos</a></li>
+          			<li><a href="/" title="Our ideas" class="">Our ideas</a></li>
+          			<li><a href="/" title="Who we are" class="">Who we are</a></li>
+          			<li><a href="/" title="Who we are" class="">Blog</a></li>
 
 				</ul>
 			 </nav>
@@ -503,11 +505,11 @@
 		<aside class="side-nav">
 		<nav>
 			<ul>
-          	<li><a href="what-we-do/index.html" title="What we do" class="">What we do</a></li>
-          			<li><a href="our-work/index.html" title="Our work" class="">Demos</a></li>
-          			<li><a href="our-ideas/index.html" title="Our ideas" class="">Our ideas</a></li>
-          			<li><a href="who-we-are/index.html" title="Who we are" class="">Who we are</a></li>
-          			<li><a href="who-we-are/index.html" title="Who we are" class="">Blog</a></li>
+          	<li><a href="/" title="What we do" class="">What we do</a></li>
+          			<li><a href="/demo" title="Our work" class="">Demos</a></li>
+          			<li><a href="/" title="Our ideas" class="">Our ideas</a></li>
+          			<li><a href="/" title="Who we are" class="">Who we are</a></li>
+          			<li><a href="/" title="Who we are" class="">Blog</a></li>
 			</ul>
 		</nav>
 	</aside>	<aside class="side-logo">
@@ -673,23 +675,27 @@
 		var template_directory_uri = "http://noescomun.com/wp-content/themes/uncommon";
 		var site_url = "http://noescomun.com/";
 	</script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/modernizrffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../../unpkg.com/sweetalert%402.1.0/dist/sweetalert.min.js?v=1.4"></script>
-	<script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.minffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.minffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/jquery.flexslider-minffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/jquery.mousewheelffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/TweenMax.minffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/TimelineMax.minffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/ScrollMagicffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/plugins/animation.gsapffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/plugins/debug.addIndicatorsffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/glitch-canvas-browser.minffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/moment.minffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/moment-timezone-with-data.minffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/Utilsffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/Commonffaf.js?v=1.4"></script>
-	<script type="text/javascript" src="../wp-content/themes/uncommon/js/GlitchHeaderffaf.js?v=1.4"></script><script type="text/javascript" src="../wp-content/themes/uncommon/js/game.js"></script><script type="text/javascript" src="../wp-content/themes/uncommon/js/pong.js"></script><script type="text/javascript" src="../wp-content/themes/uncommon/js/home.js"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/modernizrffaf.js') }}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/jquery.flexslider-minffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/jquery.mousewheelffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/TweenMax.minffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/TimelineMax.minffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/ScrollMagicffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/plugins/animation.gsapffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/plugins/debug.addIndicatorsffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/glitch-canvas-browser.minffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/moment.minffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/moment-timezone-with-data.minffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/Utilsffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/Commonffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/GlitchHeaderffaf.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/game.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/pong.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static' ,filename='js/home.js')}}"></script>
 		</body>
 
 </html>	
