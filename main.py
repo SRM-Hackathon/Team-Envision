@@ -22,7 +22,7 @@ def demofinal():
 		return render_template('index3.html', label=label)
 		
 	else:
-		return "Nhi Huva!!"
+		return "Nhi bana!!"
 
 
 if __name__ == "__main__":
