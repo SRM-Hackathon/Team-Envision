@@ -175,12 +175,7 @@ audio {
 
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles-ourwork4114.css')}}">
 <!-- HEADER SECOND PART-->
-<script>
-		function myFunction(){
-				var s = document.getElementById("search");
-				s.setAttribute("value","Ashim Sharma");
-		}
-	</script>
+
     
 <!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -190,10 +185,21 @@ audio {
 	})(window,document,'script','dataLayer','GTM-MRZ2GMN');</script>
 <!-- End Google Tag Manager -->
 
+<script type="text/javascript">
+function myfun() {
+ var k ='{{ label }}';
+	document.getElementById("search").setAttribute("value", k);
 	
+}
+	</script>
+	
+
 </head>
-<body>
+
+
+<body onload="myfun()" >
 	
+
     <div class="wrapper_header" style="height:610px;">
   		<div id="img-container" bg-glitch="ourwork-bg@2x.jpg" style="background-position: center;background-repeat: repeat;"></div>
       <div class="inner-container">
@@ -202,9 +208,9 @@ audio {
 
  <br><br><br><br>
 
-<form class="search-form" method="GET">
-  <input type="search" value="" placeholder="Search" name="q" class="search-input">
-  <button type="submit" class="search-button">
+<form class="search-form" method="GET" style="margin-top:10%;">
+  <input type="search" id="search" placeholder="Search" name="q"  class="search-input">
+   <button type="submit" class="search-button">
     <svg class="submit-button">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
     </svg>
@@ -932,6 +938,12 @@ function createDownloadLink(blob) {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ 
+
 
   <script type="text/javascript" src="{{url_for('static' ,filename='js/jquery.flexslider-minffaf.js')}}"></script>
   <script type="text/javascript" src="{{url_for('static' ,filename='js/jquery.mousewheelffaf.js')}}"></script>

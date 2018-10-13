@@ -171,6 +171,45 @@ audio {
 .search-option div input:checked + label span::after {
   border-top-color: #e24040;
 }
+
+
+
+
+
+.btn-hover {
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    box-shadow:3px 10px #000;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-3 {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
+}
+
 </style>
 
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles-ourwork4114.css')}}">
@@ -198,23 +237,24 @@ audio {
   		<div id="img-container" bg-glitch="ourwork-bg@2x.jpg" style="background-position: center;background-repeat: repeat;"></div>
       <div class="inner-container">
 
-		 <div id="controls" style=" justify-content: center;display: flex;align-items: center;">
+	<h1 style="font-size:70px;text-align:center;margin-left:17.5%;margin-top:15%;">Demo</h1><br>
+		 <div id="controls" style=" justify-content: center;display: flex;align-items: center;margin-top:0%;">
 
-
-   <button  class="btn btn-secondary btn-lg" id="recordButton">Record</button>
-   <button class="btn btn-danger" id="pauseButton" disabled>Pause</button>
-   <button class="btn btn-danger" id="stopButton" disabled>Stop</button>
+   <button  class="btn-hover color-3" id="recordButton">Record</button>
+   <button class="btn btn-danger" id="pauseButton" disabled style="visibility:hidden;">Pause</button>
+   <button class="btn-hover color-3" id="stopButton" disabled>Stop</button>
   </div>
+  <br><br><br>
   <h3>Recordings</h3>
   <ol id="recordingsList"></ol>
 
-  <button onclick="myFunction()">Get Value</button>
+ <!-- <button onclick="myFunction()">Get Value</button>-->
 
  <br><br><br><br>
 
 <form class="search-form" method="GET">
   <input type="search" value="" placeholder="Search" name="q" class="search-input">
-  <button type="submit" class="search-button">
+   <button type="submit" class="search-button">
     <svg class="submit-button">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
     </svg>
@@ -244,7 +284,7 @@ audio {
 	
 		<div class="logo">
 
-			<a href="http://noescomun.com/">
+			<a href="/">
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="416px" height="70px" viewBox="0 0 416 70" enable-background="new 0 0 416 70" xml:space="preserve">
 					 <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M113.366,42.28c0,4.226-2.574,6.732-6.496,6.732
 						c-3.949,0-6.447-2.506-6.447-6.732V18.491h-7.297v24.057c0,7.763,6.08,12.839,13.744,12.839c7.646,0,13.725-5.076,13.725-12.839
@@ -288,7 +328,6 @@ audio {
 			</a>
 		</div>
 	</div>			
-
 <!-- 
     <div class="wrapper_section intro">
   		<div class="inner-container">
